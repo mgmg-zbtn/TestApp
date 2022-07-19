@@ -15,8 +15,12 @@ import net.htmlparser.jericho.Source;
 
 /**
  * 
- * DLしたページからチャンネルのURLとタイトルを抽出してchrome用のブックマークファイルにエクスポート
+ * DLしたyoutubeの適当なページからチャンネルのURLとタイトルを抽出してchrome用のブックマークファイルにエクスポート
  * そのままインポートすることができる
+ * 
+ * jerichoの練習
+ * chromeのブックマークの仕様
+ * 正規表現はシンプル
  * 
  */
 public class YoutubeBookmark {
@@ -26,6 +30,7 @@ public class YoutubeBookmark {
 		File temp = new File("temp//" + System.nanoTime() + ".html");
 		try {
 			temp.createNewFile();
+			
 			BufferedWriter bw = new BufferedWriter(new FileWriter(temp));
 			bw.write("<!DOCTYPE NETSCAPE-Bookmark-file-1>");
 			bw.newLine();
